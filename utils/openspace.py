@@ -3,12 +3,11 @@ from utils.table import Table
 
 
 class OpenSpace:
-    def __init__(self, number_of_tables=6):
-        self.tables = [Table() for _ in range(number_of_tables)]
+    def __init__(self):
+        self.tables = [Table() for _ in range(6)]
 
-    def organize(self, people):
+    def organize(self, people: list[str]):
         random.shuffle(people)
-
         overflow = []
 
         for person in people:
@@ -26,22 +25,11 @@ class OpenSpace:
 
     def display(self):
         for i, table in enumerate(self.tables):
-            print(f"\nTable {i + 1}")
+            print(f"\nTable {i+1}")
+
             for seat in table.seats:
-                print("-", seat.occupant)
+                if seat.occupant:
+                    print("-", seat.occupant)
 
-
-                
-
-from utils.file_utils import load_people
-from utils.openspace import OpenSpace
-
-people = load_people("new_colleagues.txt")
-
-space = OpenSpace()
-
-overflow = space.organize(people)
-
-space.display()
-
-print("\nOverflow:", overflow)
+    def seats_left(self):
+        return sum(table.left_capacity() for table in self.tables)
