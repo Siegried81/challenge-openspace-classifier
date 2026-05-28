@@ -1,3 +1,12 @@
-def load_people(filepath: str) -> list[str]:
-    with open(filepath, "r", encoding="utf-8") as file:
-        return [line.strip() for line in file if line.strip()]
+import csv
+def read_names_from_csv(filepath):
+    names = []
+
+    with open(filepath, newline="", encoding="utf-8") as file:
+        reader = csv.reader(file)
+
+        for row in reader:
+            if row:
+                names.append(row[0])
+
+    return names

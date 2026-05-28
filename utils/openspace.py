@@ -6,8 +6,9 @@ class OpenSpace:
     def __init__(self):
         self.tables = [Table() for _ in range(6)]
 
-    def organize(self, people: list[str]):
+    def organize(self, people: list[str]) -> list[str]:
         random.shuffle(people)
+
         overflow = []
 
         for person in people:
@@ -25,11 +26,11 @@ class OpenSpace:
 
     def display(self):
         for i, table in enumerate(self.tables):
-            print(f"\nTable {i+1}")
+            print(f"\nTable {i + 1}")
 
             for seat in table.seats:
                 if seat.occupant:
                     print("-", seat.occupant)
 
-    def seats_left(self):
+    def seats_left(self) -> int:
         return sum(table.left_capacity() for table in self.tables)
