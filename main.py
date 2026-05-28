@@ -1,26 +1,26 @@
-import utils.file_utils as utils                # import file utilities
-from utils.openspace import OpenSpace           # import OpenSpace class
+from utils.file_utils import read_names_from_csv  # import function to read CSV file
+from utils.openspace import OpenSpace           # import OpenSpace class (handles tables and seating)
 
 
 def main():
-                                                # load names from csv file
-    names = utils.read_names_from_csv("new_colleagues.csv")
+                                                # read all names from CSV file
+    names = read_names_from_csv("new_colleagues.csv")
 
-                                                # create open space system
+                                                # create an OpenSpace (all tables + seats)
     space = OpenSpace()
 
-                                                # assign people to tables
+                                                # assign people to seats, get those who have no place
     overflow = space.organize(names)
 
-                                                # display seating plan
+                                                # display seating arrangement in console
     space.display()
 
-                                                # save result into csv file
+                                                # save seating result into a CSV file
     space.store("output.csv")
 
-                                                # print people without seats
+                                                # print people who could not be placed
     print("\nOverflow:", overflow)
 
 
-                                                # run program
+                                                # run the program
 main()

@@ -1,16 +1,16 @@
-import csv  # module to read CSV files
+import csv                                  # module to read CSV files
 
-def read_names_from_csv(filepath):     
-    names = []                              # create empty list to store names
 
-    # open the csv file safely
+def read_names_from_csv(filepath):
+    names = []                              # list to store names
+
+                                            # open file safely with utf-8 encoding
     with open(filepath, newline="", encoding="utf-8") as file:
-        reader = csv.reader(file)           # read file line by line
+        reader = csv.reader(file)
 
-                                            # loop through each row in the file
+                                            # read each row
         for row in reader:
-            if row:                         # avoid empty lines
-                names.append(row[0])        # take first column (name)
+            if row:                         # skip empty rows
+                names.append(row[0])        # take first column
 
-                                            # return full list of names
     return names
