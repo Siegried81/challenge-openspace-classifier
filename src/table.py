@@ -36,14 +36,11 @@ class Table:
 
 
 
+#tests
+table = Table()
+table.assign_seat("Anna")
+table.assign_seat("Dan")
 
-# simple tests (manual)
-
-#table = Table()
-
-#table.assign_seat("Anna")
-#table.assign_seat("Dan")
-
-#print(table.assign_seat("Max"))            # True if still space
-#print(table.assign_seat("Hiba"))
-#print(table.assign_seat("Extra"))            # False if full
+print(table.assign_seat("Max"))            # True if still space
+print(table.assign_seat("Hiba"))
+print(table.assign_seat("Extra"))          # False if full
