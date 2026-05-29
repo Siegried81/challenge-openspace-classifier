@@ -43,4 +43,4 @@ table.assign_seat("Dan")
 
 print(table.assign_seat("Max"))            # True if still space
 print(table.assign_seat("Hiba"))
-print(table.assign_seat("Extra"))          # False if full
+print(table.assign_seat("X"))          # False if full

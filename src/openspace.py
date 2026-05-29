@@ -1,5 +1,5 @@
 import random
-from utils.table import Table
+from table import Table
 
 
 class OpenSpace:
@@ -7,9 +7,9 @@ class OpenSpace:
         self.tables = [Table() for _ in range(6)]  # 6 tables
 
     def organize(self, names):
-        random.shuffle(names)  # mix names
+        random.shuffle(names)                       # mix names
 
-        overflow = []  # people without seats
+        overflow = []                               # people without seats
 
         for name in names:
             placed = False
@@ -46,15 +46,9 @@ class OpenSpace:
 
 
 # manual test
-
-#people = ["Anna", "Dan", "Max", "Hiba", "Victor", "Neha", "Ali", "Sara"]
-
-#space = OpenSpace()
-
-#overflow = space.organize(people)
-
-#space.display()
-
-#print("\nOverflow:", overflow)
-
-#space.store("output.csv")
+people = ["Anna", "Dan", "Max", "Hiba", "Victor", "Neha", "Hussein", "Ibrahim"]
+space = OpenSpace()
+overflow = space.organize(people)
+space.display()
+print("\nOverflow:", overflow)
+space.store("output.csv")

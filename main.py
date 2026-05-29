@@ -1,5 +1,5 @@
-from src.utils.file_utils import read_names_from_csv  # import function to read CSV file
-from src.utils.openspace import OpenSpace           # import OpenSpace class (handles tables and seating)
+from src.utils import read_names_from_csv  # import function to read CSV file
+from src.openspace import OpenSpace           # import OpenSpace class (handles tables and seating)
 
 
 def main():
