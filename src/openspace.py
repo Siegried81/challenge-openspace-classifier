@@ -46,7 +46,10 @@ class OpenSpace:
 
 
 # manual test
-people = ["Anna", "Dan", "Max", "Hiba", "Victor", "Neha", "Hussein", "Ibrahim"]
+people = ["Anna", "Dan", "Gaetan", "Guillermo", "Gunay", 
+                         "Hiba", "Hussein", "Ibrahim", "Ibtihel", "Imad", "Iness", 
+                         "Irene","Jeong", "Mahalakshmi", "Max", "Neha", "Siegried", 
+                         "Sitara", "Sooyoung", "Stephane", "Thi", "Uzair", "Victor", "Vanessa"]
 space = OpenSpace()
 overflow = space.organize(people)
 space.display()
