@@ -18,7 +18,6 @@ class Seat:
 
         return name                         # return removed person
 
-
 class Table:
     def __init__(self, capacity=4):
                                             # create a table with a fixed number of seats
@@ -35,7 +34,6 @@ class Table:
     
 
 
-
 #tests
 table = Table()
 table.assign_seat("Anna")
@@ -44,3 +42,4 @@ table.assign_seat("Dan")
 print(table.assign_seat("Max"))            # True if still space
 print(table.assign_seat("Hiba"))
 print(table.assign_seat("X"))          # False if full
+

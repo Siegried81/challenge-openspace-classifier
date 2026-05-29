@@ -1,7 +1,6 @@
 import random
 from table import Table
 
-
 class OpenSpace:
     def __init__(self):
         self.tables = [Table() for _ in range(6)]  # 6 tables
@@ -43,6 +42,7 @@ class OpenSpace:
                     file.write(f"{i+1},{j+1},{seat.occupant}\n")
 
         file.close()
+
 
 
 # manual test

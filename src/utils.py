@@ -1,6 +1,5 @@
 import csv                                  # module to read CSV files
 
-
 def read_names_from_csv(filepath):
     names = []                              # list to store names
 
@@ -14,3 +13,4 @@ def read_names_from_csv(filepath):
                 names.append(row[0])        # take first column
 
     return names
+
