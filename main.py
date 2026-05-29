@@ -2,15 +2,15 @@ from src.openspace import OpenSpace
 from src.utils import read_names_from_csv
 
 def main():
-    # charge les données
+                                                                # load data
     names = read_names_from_csv("new_colleagues.csv")
 
-    # setup fixe (sans config.json)
+                                                                # setup fixe (sans config.json)
     open_space = OpenSpace(
         {"tables": 6, "seats_per_table": 4}
     )
 
-    # exécution simple
+                                                                # exécution simple
     open_space.organize(names)
 
     print("Seats:", open_space.total_seats())
